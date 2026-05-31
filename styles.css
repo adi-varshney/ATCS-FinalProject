@@ -468,6 +468,15 @@ button:hover {
     text-align: center;
   }
 
+  .arrow {
+    font-size: 0;
+  }
+
+  .arrow::before {
+    content: "↓";
+    font-size: 2rem;
+  }
+
   .info-grid,
   .results-grid,
   .example-grid {
