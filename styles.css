@@ -361,15 +361,28 @@ button:hover {
 
 .image-placeholder {
   display: flex;
-  min-height: 155px;
+  min-height: 138px;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 10px;
   padding: 20px;
   background: var(--surface-container);
   color: var(--primary);
   font-weight: 700;
   text-align: center;
   border-bottom: 1px solid var(--surface-bright);
+}
+
+.image-placeholder svg {
+  width: 34px;
+  height: 34px;
+  stroke-width: 1.8;
+}
+
+.image-placeholder span {
+  color: var(--on-surface);
+  font-size: 0.95rem;
 }
 
 .example-content {
