@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulation | Founder Effect</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="site-name" href="index.html">Founder Effect</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a class="active" href="simulation.html">Simulation</a>
+        <a href="examples.html">Real-World Examples</a>
+        <a href="quiz.html">Quiz</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <div class="page-heading">
+      <p class="eyebrow">Computer science component</p>
+      <h1>Trait Frequency Simulation</h1>
+      <p>
+        This simple model uses sample data to show how eye color percentages
+        might change after a small founder population becomes isolated. It is an
+        educational demonstration, not a complete genetics model.
+      </p>
+    </div>
+
+    <section class="simulation-panel">
+      <div class="control-row">
+        <label for="scenario">Choose a scenario</label>
+        <select id="scenario" name="scenario">
+          <option value="mostlyBrown">Mostly Brown Eyes</option>
+          <option value="balanced">50/50 Population</option>
+          <option value="mostlyBlue">Mostly Blue Eyes</option>
+        </select>
+        <button id="runSimulation" type="button">Run Simulation</button>
+      </div>
+
+      <div class="results-grid" aria-live="polite">
+        <article class="stat-card">
+          <h2>Generation 0</h2>
+          <p id="generationStart">Choose a scenario and run the simulation.</p>
+        </article>
+        <article class="stat-card">
+          <h2>Generation 10</h2>
+          <p id="generationEnd">The final generation data will appear here.</p>
+        </article>
+      </div>
+
+      <div class="chart-card">
+        <canvas id="traitChart" aria-label="Line graph of eye color percentages by generation"></canvas>
+      </div>
+
+      <div class="explanation-box">
+        <h2>Explanation</h2>
+        <p id="scenarioExplanation">
+          The explanation will appear after the simulation runs.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>High School Cross-Curricular Genetics Project</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="simulation.js"></script>
+</body>
+</html>

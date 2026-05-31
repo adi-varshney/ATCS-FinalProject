@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz | Founder Effect</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="site-name" href="index.html">Founder Effect</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="simulation.html">Simulation</a>
+        <a href="examples.html">Real-World Examples</a>
+        <a class="active" href="quiz.html">Quiz</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <div class="page-heading">
+      <p class="eyebrow">Check your understanding</p>
+      <h1>Founder Effect Quiz</h1>
+      <p>Answer the questions below, then submit the quiz to see your score.</p>
+    </div>
+
+    <form id="quizForm" class="quiz-form">
+      <fieldset class="question-card">
+        <legend>1. What is the Founder Effect?</legend>
+        <label><input type="radio" name="q1" value="a"> A new species forming because of natural selection</label>
+        <label><input type="radio" name="q1" value="b"> A small group starting a new population with only part of the original gene pool</label>
+        <label><input type="radio" name="q1" value="c"> A mutation that always helps a population survive</label>
+      </fieldset>
+
+      <fieldset class="question-card">
+        <legend>2. The Founder Effect is a form of which process?</legend>
+        <label><input type="radio" name="q2" value="a"> Genetic drift</label>
+        <label><input type="radio" name="q2" value="b"> Photosynthesis</label>
+        <label><input type="radio" name="q2" value="c"> Cellular respiration</label>
+      </fieldset>
+
+      <fieldset class="question-card">
+        <legend>3. Why can isolated populations develop unusual trait frequencies?</legend>
+        <label><input type="radio" name="q3" value="a"> They receive many new genes from nearby populations</label>
+        <label><input type="radio" name="q3" value="b"> Their environment removes all harmful alleles immediately</label>
+        <label><input type="radio" name="q3" value="c"> They have limited gene flow and may start with a small sample of genes</label>
+      </fieldset>
+
+      <fieldset class="question-card">
+        <legend>4. Which gene is connected with Huntington's Disease in the Lake Maracaibo example?</legend>
+        <label><input type="radio" name="q4" value="a"> HTT</label>
+        <label><input type="radio" name="q4" value="b"> EVC</label>
+        <label><input type="radio" name="q4" value="c"> BRCA2</label>
+      </fieldset>
+
+      <fieldset class="question-card">
+        <legend>5. In the simulation, what does the graph show?</legend>
+        <label><input type="radio" name="q5" value="a"> Changes in eye color percentages over generations</label>
+        <label><input type="radio" name="q5" value="b"> The exact DNA sequence of each person</label>
+        <label><input type="radio" name="q5" value="c"> The size of every chromosome</label>
+      </fieldset>
+
+      <button type="submit">Submit Quiz</button>
+      <p id="quizResult" class="quiz-result" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>High School Cross-Curricular Genetics Project</p>
+  </footer>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
