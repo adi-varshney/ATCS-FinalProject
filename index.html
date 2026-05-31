@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Founder Effect in Isolated Populations</title>
+  <script>
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "dark";
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,6 +23,10 @@
         <a href="examples.html">Real-World Examples</a>
         <a href="quiz.html">Quiz</a>
       </div>
+      <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="true">
+        <i class="theme-icon" data-lucide="moon" aria-hidden="true"></i>
+        <span class="theme-label">Dark</span>
+      </button>
     </nav>
   </header>
 
@@ -96,7 +107,10 @@
   </main>
 
   <footer class="site-footer">
-    <p>High School Cross-Curricular Genetics Project</p>
+    <p>The Genetics of the "Founder Effect" in Isolated Populations Group #2</p>
+    <p>Adi Varshney and Shriya Pachgade</p>
   </footer>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="theme.js"></script>
 </body>
 </html>

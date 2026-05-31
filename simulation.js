@@ -32,9 +32,31 @@ const chartCanvas = document.getElementById("traitChart");
 
 let traitChart;
 
+function getChartTheme() {
+  const isDark = document.documentElement.dataset.theme !== "light";
+
+  return {
+    text: isDark ? "#c1c7ce" : "#53606f",
+    grid: isDark ? "#31394d" : "#d5dde8",
+    brown: isDark ? "#d4a373" : "#7a4f24",
+    blue: isDark ? "#38bdf8" : "#0f5f86"
+  };
+}
+
+function applyChartDefaults() {
+  const theme = getChartTheme();
+
+  Chart.defaults.color = theme.text;
+  Chart.defaults.borderColor = theme.grid;
+  Chart.defaults.font.family = "Inter, Arial, sans-serif";
+}
+
 function updateSimulation() {
   const selectedScenario = scenarios[scenarioSelect.value];
   const lastIndex = selectedScenario.brown.length - 1;
+  const chartTheme = getChartTheme();
+
+  applyChartDefaults();
 
   generationStart.textContent =
     `Brown Eyes: ${selectedScenario.brown[0]}%, Blue Eyes: ${selectedScenario.blue[0]}%`;
@@ -54,7 +76,7 @@ function updateSimulation() {
         {
           label: "Brown Eyes",
           data: selectedScenario.brown,
-          borderColor: "#7a4f24",
+          borderColor: chartTheme.brown,
           backgroundColor: "rgba(122, 79, 36, 0.12)",
           tension: 0.25,
           pointRadius: 4
@@ -62,7 +84,7 @@ function updateSimulation() {
         {
           label: "Blue Eyes",
           data: selectedScenario.blue,
-          borderColor: "#173f6f",
+          borderColor: chartTheme.blue,
           backgroundColor: "rgba(23, 63, 111, 0.12)",
           tension: 0.25,
           pointRadius: 4
@@ -83,6 +105,9 @@ function updateSimulation() {
       },
       scales: {
         x: {
+          grid: {
+            color: chartTheme.grid
+          },
           title: {
             display: true,
             text: "Generation"
@@ -91,6 +116,9 @@ function updateSimulation() {
         y: {
           min: 0,
           max: 100,
+          grid: {
+            color: chartTheme.grid
+          },
           title: {
             display: true,
             text: "Percentage of Population"
@@ -105,3 +133,11 @@ function updateSimulation() {
 }
 
 runButton.addEventListener("click", updateSimulation);
+window.addEventListener("themechange", () => {
+  if (traitChart) {
+    updateSimulation();
+  } else {
+    applyChartDefaults();
+  }
+});
+applyChartDefaults();
