@@ -1,4 +1,4 @@
-cost themeToggle = document.querySelector(".theme-toggle");
+const themeToggle = document.querySelector(".theme-toggle");
 
 function getTheme() {
   return document.documentElement.dataset.theme || "dark";
@@ -15,14 +15,14 @@ function setTheme(theme) {
     themeToggle.setAttribute("aria-pressed", String(isDark));
     themeToggle.setAttribute(
       "aria-label",
-      isDark ?: "Switch to light mode" ? "Switch to dark mode"
+      isDark ? "Switch to light mode" : "Switch to dark mode"
     );
     themeIcon.setAttribute("data-lucide", isDark ? "moon" : "sun");
     themeToggle.querySelector(".theme-label").textContent = isDark ? "Dark" : "Light";
   }
 
   if (window.lucide) {
-    window.lucide.createIcons(0);
+    window.lucide.createIcons();
   }
 
   window.dispatchEvent(new CustomEvent("themechange", { detail: { theme } }));
