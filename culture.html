@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Culture & Literature | Founder Effect</title>
+  <script>
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "dark";
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="site-name" href="index.html" aria-label="Founder Genetics home">
+        <span class="brand-mark" aria-hidden="true"><i data-lucide="dna"></i></span>
+        <span class="brand-text">Founder Genetics</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="simulation.html">Simulation</a>
+        <a href="examples.html">Real-World Examples</a>
+        <a class="active" href="culture.html">Culture & Literature</a>
+        <a href="quiz.html">Quiz</a>
+      </div>
+      <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="true">
+        <i class="theme-icon" data-lucide="moon" aria-hidden="true"></i>
+        <span class="theme-label">Dark</span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <div class="page-heading">
+      <p class="eyebrow">History, society, and literature</p>
+      <h1>Founder Effects Beyond Biology</h1>
+      <p>
+        The Founder Effect is a genetic idea, but its impact is also social.
+        When an inherited condition becomes common in an isolated community,
+        families may face medical uncertainty, stigma, financial pressure, and
+        difficult questions about what is passed from one generation to the next.
+      </p>
+    </div>
+
+    <section class="culture-grid">
+      <article class="feature-card">
+        <div class="feature-icon" aria-hidden="true"><i data-lucide="map"></i></div>
+        <h2>Isolated Communities and History</h2>
+        <p>
+          In communities near Lake Maracaibo, Venezuela, Huntington's Disease
+          became unusually common because many people descended from a small
+          number of ancestors who carried the HTT gene variant. Geographic
+          isolation, family networks, and limited movement between communities
+          helped the condition remain visible across generations.
+        </p>
+        <p>
+          This history matters because the community is not just a data set. It
+          includes families who helped scientists understand Huntington's Disease
+          while also living with the everyday consequences of the disorder.
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon" aria-hidden="true"><i data-lucide="heart-handshake"></i></div>
+        <h2>Stigma and Support</h2>
+        <p>
+          Inherited disorders can be misunderstood as personal weakness, bad
+          luck, or family shame. This can make people less likely to discuss
+          symptoms, seek testing, or ask for help.
+        </p>
+        <p>
+          At the same time, family support is often central. Relatives may help
+          with caregiving, transportation, childcare, and emotional support. A
+          respectful public-health approach should protect privacy, avoid
+          blaming families, and recognize local community networks.
+        </p>
+      </article>
+    </section>
+
+    <section class="section-narrow">
+      <h2>Inherited Fate in Literature</h2>
+      <div class="literature-panel">
+        <p>
+          Latin American family sagas often explore the idea that history repeats
+          itself inside families. In Gabriel Garcia Marquez's
+          <em>One Hundred Years of Solitude</em>, the Buendia family and the
+          town of Macondo experience repeated names, repeated choices, isolation,
+          and a feeling that the past keeps returning.
+        </p>
+        <p>
+          This does not mean genetics works like a curse. The literary theme of
+          an inherited fate is symbolic, while the Founder Effect is a biological
+          process. Comparing them helps show how people use stories to understand
+          family history, fear, responsibility, and the feeling that one
+          generation's past can shape the next generation's future.
+        </p>
+      </div>
+    </section>
+
+    <section class="connection-grid" aria-label="Cross-curricular connections">
+      <article class="mini-card">
+        <h3>Science</h3>
+        <p>Founder effects explain why certain inherited conditions can become more common in small, isolated populations.</p>
+      </article>
+      <article class="mini-card">
+        <h3>Social Studies</h3>
+        <p>Community history affects access to health care, education, privacy, and support for affected families.</p>
+      </article>
+      <article class="mini-card">
+        <h3>Literature</h3>
+        <p>Family sagas use repetition and inherited patterns to explore how the past can shape identity.</p>
+      </article>
+    </section>
+
+    <section class="sources-box">
+      <h2>Further Reading</h2>
+      <ul>
+        <li><a href="https://www.ncbi.nlm.nih.gov/books/NBK559920/" target="_blank" rel="noreferrer">NCBI Bookshelf: Huntington's Disease near Lake Maracaibo</a></li>
+        <li><a href="https://www.litcharts.com/lit/one-hundred-years-of-solitude/themes" target="_blank" rel="noreferrer">LitCharts: Themes in <em>One Hundred Years of Solitude</em></a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>The Genetics of the "Founder Effect" in Isolated Populations Group #2</p>
+    <p>Adi Varshney and Shriya Pachgade</p>
+  </footer>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="theme.js"></script>
+</body>
+</html>

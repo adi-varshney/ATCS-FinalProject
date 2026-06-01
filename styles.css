@@ -421,6 +421,84 @@ button:hover {
   font-size: 1.28rem;
 }
 
+.culture-grid,
+.connection-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.culture-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.connection-grid {
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 28px;
+}
+
+.feature-card,
+.mini-card,
+.literature-panel,
+.sources-box {
+  padding: 22px;
+  background: var(--surface-container-low);
+  border: 1px solid var(--surface-bright);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 14px;
+  border: 1px solid var(--surface-bright);
+  border-radius: var(--radius);
+  background: var(--surface-container);
+  color: var(--primary);
+}
+
+.feature-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke-width: 1.8;
+}
+
+.feature-card p,
+.mini-card p,
+.literature-panel p,
+.sources-box li {
+  color: var(--on-surface-variant);
+}
+
+.section-narrow {
+  max-width: 920px;
+  margin-top: 42px;
+}
+
+.literature-panel {
+  border-left: 4px solid var(--primary);
+}
+
+.sources-box {
+  margin-top: 28px;
+}
+
+.sources-box h2 {
+  font-size: 1.25rem;
+}
+
+.sources-box ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.sources-box a {
+  color: var(--primary);
+}
+
 .gene-label {
   color: var(--on-surface);
   font-weight: 700;
@@ -519,7 +597,9 @@ button:hover {
 
   .info-grid,
   .results-grid,
-  .example-grid {
+  .example-grid,
+  .culture-grid,
+  .connection-grid {
     grid-template-columns: 1fr;
   }
 
