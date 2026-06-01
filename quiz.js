@@ -1,7 +1,7 @@
 const answers = {
-  q1: "b",
+  q1: "a",
   q2: "a",
-  q3: "c",
+  q3: "a",
   q4: "a",
   q5: "a"
 };
